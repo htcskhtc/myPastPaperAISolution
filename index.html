@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HKDSE Math Past Paper Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a24;
+            --bg-card-hover: #22222e;
+            --accent-cyan: #00d4ff;
+            --accent-magenta: #ff00aa;
+            --accent-yellow: #ffd000;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --text-muted: #606070;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --gradient-hero: linear-gradient(135deg, #00d4ff22 0%, #ff00aa22 50%, #ffd00022 100%);
+            --shadow-glow: 0 0 40px rgba(0, 212, 255, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Animated background */
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(ellipse at 20% 20%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(255, 0, 170, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(255, 208, 0, 0.05) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(var(--border-subtle) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero Section */
+        header {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            animation: fadeInDown 0.6s ease-out;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--accent-cyan);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-cyan) 50%, var(--accent-magenta) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 0.6s ease-out 0.1s both;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 48px;
+            padding: 32px;
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            border: 1px solid var(--border-subtle);
+            animation: fadeInUp 0.6s ease-out 0.3s both;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 4px;
+        }
+
+        /* Year Sections */
+        main {
+            padding: 60px 0 100px;
+        }
+
+        .year-section {
+            margin-bottom: 64px;
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        .year-section:nth-child(1) { animation-delay: 0.4s; }
+        .year-section:nth-child(2) { animation-delay: 0.5s; }
+        .year-section:nth-child(3) { animation-delay: 0.6s; }
+
+        .year-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 28px;
+        }
+
+        .year-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 12px 24px;
+            background: var(--gradient-hero);
+            border-radius: 12px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .year-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--border-subtle), transparent);
+        }
+
+        .paper-group {
+            margin-bottom: 32px;
+        }
+
+        .paper-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            padding: 6px 14px;
+            background: var(--bg-card);
+            border-radius: 8px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .paper-label.p1::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: var(--accent-cyan);
+            border-radius: 3px;
+        }
+
+        .paper-label.p2::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: var(--accent-magenta);
+            border-radius: 3px;
+        }
+
+        /* Question Grid */
+        .questions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 12px;
+        }
+
+        .question-card {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+
+        .question-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-magenta));
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+
+        .question-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(0, 212, 255, 0.3);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .question-card:hover::before {
+            opacity: 1;
+        }
+
+        .question-card:active {
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 60px 0 40px;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .year-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .year-line {
+                display: none;
+            }
+
+            .questions-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+        }
+
+        /* Empty state for P1 */
+        .empty-state {
+            padding: 24px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            background: var(--bg-card);
+            border: 1px dashed var(--border-subtle);
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    <div class="grid-overlay"></div>
+    
+    <div class="container">
+        <header>
+            <div class="hero-badge">HKDSE Mathematics</div>
+            <h1>Past Paper Solutions</h1>
+            <p class="subtitle">AI-powered solutions for Hong Kong DSE Mathematics Core papers. Navigate by year and paper type.</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Years</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">21</div>
+                    <div class="stat-label">Questions</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">P2</div>
+                    <div class="stat-label">Paper Type</div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- 2025 -->
+            <section class="year-section">
+                <div class="year-header">
+                    <div class="year-badge">2025</div>
+                    <div class="year-line"></div>
+                </div>
+                
+                <div class="paper-group">
+                    <div class="paper-label p1">Paper 1</div>
+                    <div class="empty-state">No Paper 1 solutions available yet</div>
+                </div>
+                
+                <div class="paper-group">
+                    <div class="paper-label p2">Paper 2</div>
+                    <div class="questions-grid">
+                        <a href="DSECore25P2_Q02.html" class="question-card">Q02</a>
+                        <a href="DSECore25P2_Q03.html" class="question-card">Q03</a>
+                        <a href="DSECore25P2_Q04.html" class="question-card">Q04</a>
+                        <a href="DSECore25P2_Q05.html" class="question-card">Q05</a>
+                        <a href="DSECore25P2_Q06.html" class="question-card">Q06</a>
+                        <a href="DSECore25P2_Q07.html" class="question-card">Q07</a>
+                        <a href="DSECore25P2_Q08.html" class="question-card">Q08</a>
+                        <a href="DSECore25P2_Q09.html" class="question-card">Q09</a>
+                        <a href="DSECore25P2_Q10.html" class="question-card">Q10</a>
+                        <a href="DSECore25P2_Q11.html" class="question-card">Q11</a>
+                        <a href="DSECore25P2_Q12.html" class="question-card">Q12</a>
+                        <a href="DSECore25P2_Q13.html" class="question-card">Q13</a>
+                        <a href="DSECore25P2_Q14.html" class="question-card">Q14</a>
+                        <a href="DSECore25P2_Q15.html" class="question-card">Q15</a>
+                        <a href="DSECore25P2_Q16.html" class="question-card">Q16</a>
+                        <a href="DSECore25P2_Q17.html" class="question-card">Q17</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2019 -->
+            <section class="year-section">
+                <div class="year-header">
+                    <div class="year-badge">2019</div>
+                    <div class="year-line"></div>
+                </div>
+                
+                <div class="paper-group">
+                    <div class="paper-label p1">Paper 1</div>
+                    <div class="empty-state">No Paper 1 solutions available yet</div>
+                </div>
+                
+                <div class="paper-group">
+                    <div class="paper-label p2">Paper 2</div>
+                    <div class="questions-grid">
+                        <a href="DSECore19P2_Q23.html" class="question-card">Q23</a>
+                        <a href="DSECore19P2_Q27.html" class="question-card">Q27</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2018 -->
+            <section class="year-section">
+                <div class="year-header">
+                    <div class="year-badge">2018</div>
+                    <div class="year-line"></div>
+                </div>
+                
+                <div class="paper-group">
+                    <div class="paper-label p1">Paper 1</div>
+                    <div class="empty-state">No Paper 1 solutions available yet</div>
+                </div>
+                
+                <div class="paper-group">
+                    <div class="paper-label p2">Paper 2</div>
+                    <div class="questions-grid">
+                        <a href="DSECore18P2_Q06.html" class="question-card">Q06</a>
+                        <a href="DSECore18P2_Q25.html" class="question-card">Q25</a>
+                        <a href="DSECore18P2_Q26.html" class="question-card">Q26</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>HKDSE Math Past Paper AI Solutions &bull; Built with care</p>
+        </footer>
+    </div>
+</body>
+</html>
+
