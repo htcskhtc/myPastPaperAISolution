@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTC Mock Papers Index</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0a0f;
+      --bg-secondary: #12121a;
+      --bg-card: #1a1a24;
+      --bg-card-hover: #22222e;
+      --accent-cyan: #00d4ff;
+      --accent-magenta: #ff00aa;
+      --accent-yellow: #ffd000;
+      --text-primary: #ffffff;
+      --text-secondary: #a0a0b0;
+      --text-muted: #606070;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --gradient-hero: linear-gradient(135deg, #00d4ff22 0%, #ff00aa22 50%, #ffd00022 100%);
+      --shadow-glow: 0 0 40px rgba(0, 212, 255, 0.15);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .bg-pattern {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        radial-gradient(ellipse at 20% 20%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(255, 0, 170, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(255, 208, 0, 0.05) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .grid-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(var(--border-subtle) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.3;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header { padding: 56px 0 28px; }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .crumbs {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .crumbs a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
+
+    .crumbs a:hover { text-decoration: underline; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--accent-magenta);
+      border-radius: 50%;
+      box-shadow: 0 0 0 6px rgba(255, 0, 170, 0.08);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-cyan) 50%, var(--accent-magenta) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      max-width: 720px;
+    }
+
+    main { padding: 22px 0 80px; }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 12px;
+      margin: 24px 0 18px;
+    }
+
+    .input, .select {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      outline: none;
+    }
+
+    .input::placeholder { color: var(--text-muted); }
+
+    .hint {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      display: block;
+      position: relative;
+      padding: 16px 16px 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-magenta));
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .card:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(0, 212, 255, 0.3);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .card:hover::before { opacity: 1; }
+
+    .card-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .pill.q { color: var(--accent-yellow); border-color: rgba(255, 208, 0, 0.25); }
+    .pill.p { color: var(--accent-cyan); border-color: rgba(0, 212, 255, 0.25); }
+    .pill.y { color: var(--accent-magenta); border-color: rgba(255, 0, 170, 0.25); }
+
+    .empty {
+      padding: 20px;
+      text-align: center;
+      color: var(--text-muted);
+      background: var(--bg-card);
+      border: 1px dashed var(--border-subtle);
+      border-radius: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      border-top: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 680px) {
+      .controls { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-pattern"></div>
+  <div class="grid-overlay"></div>
+
+  <div class="container">
+    <header>
+      <div class="topbar">
+        <div class="crumbs">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>HTC Index</span>
+        </div>
+        <div class="badge">HTC Mock Papers</div>
+      </div>
+
+      <h1>HTC Index</h1>
+      <p class="subtitle">
+        Quick navigation for files whose names start with <b>HTC</b>. Use search to filter by year / paper / question (e.g. “2223”, “P1”, “Q18”).
+      </p>
+    </header>
+
+    <main>
+      <div class="controls">
+        <input id="search" class="input" placeholder="Search… (e.g. 2223, P1, Q12)" autocomplete="off" />
+        <select id="sort" class="select">
+          <option value="q_asc">Sort: Question ↑</option>
+          <option value="q_desc">Sort: Question ↓</option>
+          <option value="file_asc">Sort: Filename A→Z</option>
+          <option value="file_desc">Sort: Filename Z→A</option>
+        </select>
+      </div>
+      <div id="hint" class="hint"></div>
+      <div id="grid" class="grid"></div>
+    </main>
+
+    <footer>
+      <p>HKDSE Math Past Paper AI Solutions &bull; HTC collection</p>
+    </footer>
+  </div>
+
+  <script>
+    // Auto-maintained list of HTC files in this folder.
+    // If you add more HTC*.html files, just add them here (or ask me to generate again).
+    const HTC_FILES = [
+      "HTC2223F6MockP1_Q12.html",
+      "HTC2223F6MockP1_Q15.html",
+      "HTC2223F6MockP1_Q17.html",
+      "HTC2223F6MockP1_Q18.html",
+      "HTC2223F6MockP1_Q19.html",
+    ];
+
+    function parseHtcFilename(file) {
+      // Example: HTC2223F6MockP1_Q19.html
+      const m = /^HTC(\d{2})(\d{2})F(\d+)MockP(\d+)_Q(\d+)\.html$/i.exec(file);
+      if (!m) {
+        return { file, label: file, year: "", form: "", paper: null, q: null };
+      }
+      const y1 = m[1];
+      const y2 = m[2];
+      const form = `F${m[3]}`;
+      const paper = Number(m[4]);
+      const q = Number(m[5]);
+      const year = `${y1}/${y2}`;
+      const label = `HTC ${year} ${form} Mock P${paper} — Q${String(q).padStart(2, "0")}`;
+      return { file, label, year, form, paper, q };
+    }
+
+    const entries = HTC_FILES.map(parseHtcFilename);
+
+    const elSearch = document.getElementById("search");
+    const elSort = document.getElementById("sort");
+    const elGrid = document.getElementById("grid");
+    const elHint = document.getElementById("hint");
+
+    function normalize(s) {
+      return String(s || "").toLowerCase().replace(/\s+/g, " ").trim();
+    }
+
+    function getSorted(list) {
+      const mode = elSort.value;
+      const copy = [...list];
+      if (mode === "q_desc") copy.sort((a, b) => (b.q ?? -1) - (a.q ?? -1));
+      else if (mode === "file_asc") copy.sort((a, b) => a.file.localeCompare(b.file));
+      else if (mode === "file_desc") copy.sort((a, b) => b.file.localeCompare(a.file));
+      else copy.sort((a, b) => (a.q ?? 1e9) - (b.q ?? 1e9));
+      return copy;
+    }
+
+    function render() {
+      const q = normalize(elSearch.value);
+      const filtered = entries.filter(e => {
+        if (!q) return true;
+        const hay = normalize([e.file, e.label, e.year, e.form, e.paper != null ? `p${e.paper}` : "", e.q != null ? `q${e.q}` : ""].join(" "));
+        return hay.includes(q);
+      });
+
+      const sorted = getSorted(filtered);
+      elHint.textContent = `${sorted.length} / ${entries.length} files`;
+
+      if (sorted.length === 0) {
+        elGrid.innerHTML = `<div class="empty">No matches. Try “2223”, “P1”, “Q19”, or clear the search.</div>`;
+        return;
+      }
+
+      elGrid.innerHTML = sorted.map(e => {
+        const qText = e.q == null ? "" : `Q${String(e.q).padStart(2, "0")}`;
+        const pText = e.paper == null ? "" : `P${e.paper}`;
+        const yText = e.year || "";
+        const fText = e.form || "";
+
+        const pills = [
+          yText ? `<span class="pill y">${yText}</span>` : "",
+          pText ? `<span class="pill p">${pText}</span>` : "",
+          qText ? `<span class="pill q">${qText}</span>` : "",
+          fText ? `<span class="pill">${fText}</span>` : "",
+        ].filter(Boolean).join("");
+
+        return `
+          <a class="card" href="${e.file}">
+            <div class="card-title">${e.label}</div>
+            <div class="meta">${pills}</div>
+          </a>
+        `;
+      }).join("");
+    }
+
+    elSearch.addEventListener("input", render);
+    elSort.addEventListener("change", render);
+    render();
+  </script>
+</body>
+</html>
+
+
