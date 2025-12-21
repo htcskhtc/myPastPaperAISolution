@@ -292,11 +292,53 @@
       "HTC2223F6MockP1_Q17.html",
       "HTC2223F6MockP1_Q18.html",
       "HTC2223F6MockP1_Q19.html",
+      "HTC2324F6MockP1_Q15.html",
+      "HTC2324F6MockP1_Q16.html",
+      "HTC2324F6MockP1_Q17.html",
+      "HTC2324F6MockP1_Q18.html",
+      "HTC2324F6MockP1_Q19.html",
+      "HTC2324F6MockP1_Q41.html",
+      "HTC2324F6MockP2_Q06.html",
+      "HTC2324F6MockP2_Q19.html",
+      "HTC2324F6MockP2_Q25.html",
+      "HTC2324F6MockP2_Q27.html",
+      "HTC2324F6MockP2_Q31.html",
+      "HTC2324F6MockP2_Q34.html",
+      "HTC2324F6MockP2_Q37.html",
+      "HTC2425F6MockP2_Q17.html",
+      "HTC2425F6MockP2_Q27.html",
+      "HTC2425F6MockP2_Q31.html",
+      "HTC2425F6MockP2_Q34.html",
+      "HTC2425F6MockP2_Q35.html",
+      "HTC2425F6MockP2_Q40.html",
+      "HTC2425F6MockP2_Q41.html",
+      "HTC2526F6M2Test06_Q01.html",
+      "HTC2526F6M2Test06_Q02.html",
+      "HTC2526F6M2Test06_Q03.html",
+      "HTC2526F6M2Test06_Q04.html",
+      "HTC2526F6M2Test06_Q05.html",
+      "HTC2526F6M2Test06_Q06.html",
+      "HTC2526F6M2Test06_Q07.html",
+      "HTC2526F6M2Test06_Q08.html",
+      "HTC2526F6M2Test06_Q09.html",
+      "HTC2526F6M2Test06_index.html",
     ];
 
     function parseHtcFilename(file) {
       // Example: HTC2223F6MockP1_Q19.html
       const m = /^HTC(\d{2})(\d{2})F(\d+)MockP(\d+)_Q(\d+)\.html$/i.exec(file);
+      // Example: HTC2526F6M2Test06_index.html
+      const t = /^HTC(\d{2})(\d{2})F(\d+)M(\d+)Test(\d+)_index\.html$/i.exec(file);
+      if (t) {
+        const y1 = t[1];
+        const y2 = t[2];
+        const year = `${y1}/${y2}`;
+        const form = `F${t[3]}`;
+        const mod = `M${t[4]}`;
+        const test = String(Number(t[5])).padStart(2, "0");
+        const label = `HTC ${year} ${form} ${mod} Test ${test} — Index`;
+        return { file, label, year, form, paper: null, q: null };
+      }
       if (!m) {
         return { file, label: file, year: "", form: "", paper: null, q: null };
       }
