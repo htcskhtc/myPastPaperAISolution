@@ -143,6 +143,47 @@
             animation: fadeInUp 0.6s ease-out 0.3s both;
         }
 
+        /* Quick links */
+        .quick-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.6s ease-out 0.35s both;
+        }
+
+        .quick-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .quick-link:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(0, 212, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .quick-link-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            padding: 3px 8px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+        }
+
         .stat {
             text-align: center;
         }
@@ -390,6 +431,17 @@
                     <div class="stat-value">P2</div>
                     <div class="stat-label">Paper Type</div>
                 </div>
+            </div>
+
+            <div class="quick-links">
+                <a class="quick-link" href="htc_index.html">
+                    <span>HTC Mock Papers</span>
+                    <span class="quick-link-badge">6 files</span>
+                </a>
+                <a class="quick-link" href="HTC2526F6M2Test06_index.html">
+                    <span>HTC 25/26 F6 M2 Test 06</span>
+                    <span class="quick-link-badge">9 files</span>
+                </a>
             </div>
         </header>
 
