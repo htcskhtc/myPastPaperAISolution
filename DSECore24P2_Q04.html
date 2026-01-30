@@ -1,0 +1,1126 @@
+<html lang="en"><head><script>(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6ImIxZjQyNzYzZjkzNGExOTQwMWNkOTFhNjdjY2FhNzdiNjIwNWU2N2EiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxODMwODkzMTgzMTk1Mzk0MTcxMCIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzNmNmJlOWJhY2Y0MzlmZDZfSEtEU0VfTWF0aF9Tb2x1dGlvbnMuaHRtbC02NDMifSwiZXhwIjoxNzY5NzQ3MjYwLCJpYXQiOjE3Njk3NDM2NjAsImFsZyI6IlJTMjU2In0.OTNFZYMp3E4oZ7NYkn0sh5MkUu9uCx97P2pjg9lB7sfJNUPwBUzpB1FGlZTnlMoQocwaO816A37wtXvFwxszdw9yM0Qw4z9KJ-7Obpj90DtkzeKmlEK8yCLB9HNmXPVfdmqEJOYRNIprlcr8UT7oQQar5G58gZcxah-5glj-sdovsSD4GiD-Gh-BEhnVwLDIhOCiwKyn__D3PS330VP52LQZzhMvHsCV3hMGZ00yim18tIb-KEk1jFZWM5v77OrgKQPTWRkjTNzeHaeDjFV7yPcto5FOIKdEVhC1OwMHhn-ZO4aAWeo_HCt1W7UcDd2qT1_ZMsKafC4IKULgpFpITQ","c_3f6be9bacf439fd6_HKDSE_Math_Solutions.html-643")</script><script>'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){const d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);const c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{let a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){const b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{const c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){const c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{const c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){const c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);const e=yield c.blob();return new Promise((f,g)=>{const k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){let c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){const c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());let e;try{const f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){const b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");const c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;let c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){const c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{let g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){const g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){const b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{const e=d?(new URL(b,d||void 0)).toString():b;let f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){const [c,,e]=ia.exec(d)||[],f=c,g=e;if(!g)return"";if(g===b)return`src: ${f};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;const c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c;const e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){const d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){const d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){let d=a.cssText;const c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){let g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];const b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){const d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){const g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}const d=new Set;b(a);return d}function ua(a,b){return t(function*(){const d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){const d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){const c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b);var e=yield wa(a,b);e=yield B(e);const f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=
+16384));f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;const c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){const a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){let b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){const b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+</script><script>(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script>
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script>((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-2.5-flash-preview-09-2025","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-2.5-flash-image-preview","imageTransformModelName":"gemini-3-pro-image-preview-11-2025","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"]})</script><script>(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HKDSE Mathematics Solutions</title>
+    <!-- MathJax Configuration -->
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['\\[', '\\]'], ['$$', '$$']],
+            packages: {'[+]': ['ams', 'noerrors', 'noundefined']},
+            tags: 'ams'
+        },
+        svg: {
+            fontCache: 'global'
+        },
+        loader: {load: ['[tex]/ams', '[tex]/noerrors', '[tex]/noundefined']}
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" crossorigin="anonymous"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+        .question-block {
+            margin-bottom: 40px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .question-header {
+            background-color: #34495e;
+            color: white;
+            padding: 10px 20px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .question-content {
+            padding: 25px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+        .solution-content {
+            padding: 25px;
+            background-color: #fcfcfc;
+        }
+        .solution-title {
+            color: #27ae60;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .solution-title::before {
+            content: "✓";
+            margin-right: 10px;
+            background-color: #27ae60;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        .notes-box {
+            background-color: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+            font-size: 0.95em;
+        }
+        .notes-title {
+            color: #e65100;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+        }
+        .trap-box {
+            background-color: #ffebee;
+            border-left: 5px solid #e53935;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+            font-size: 0.95em;
+        }
+        .trap-title {
+            color: #c62828;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+        }
+        .raw-notes {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        /* Summary Table Styling */
+        .summary-section {
+            margin-top: 50px;
+        }
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .summary-table th {
+            background-color: #2c3e50;
+            color: white;
+            padding: 18px;
+            text-align: left;
+            width: 25%;
+            border-bottom: 1px solid #34495e;
+            font-weight: 600;
+        }
+        .summary-table td {
+            border-bottom: 1px solid #eee;
+            padding: 18px;
+            text-align: left;
+            vertical-align: top;
+            color: #444;
+        }
+        .summary-table tr:last-child td {
+            border-bottom: none;
+        }
+        .summary-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Lists formatting */
+        ol, ul {
+            margin-top: 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Floating Action Bar */
+        .action-bar {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+        .btn {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(41, 128, 185, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(41, 128, 185, 0.4);
+            background-color: #3498db;
+        }
+        .btn-print {
+            background-color: #27ae60;
+        }
+        .btn-print:hover {
+            background-color: #2ecc71;
+            box-shadow: 0 6px 15px rgba(39, 174, 96, 0.4);
+        }
+
+        /* Print Styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+            }
+            .question-block {
+                break-inside: avoid;
+                border: 1px solid #ccc;
+            }
+        }
+    </style>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/input/tex/extensions/noerrors.js" charset="UTF-8"></script><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style id="MJX-SVG-styles">
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+</style></head>
+<body>
+
+    <div class="action-bar no-print">
+        <button class="btn btn-download" onclick="downloadHTML()">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            Save Solution
+        </button>
+        <button class="btn btn-print" onclick="printToPDF()">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+            Print / PDF
+        </button>
+    </div>
+
+    <div class="container">
+        <h1>HKDSE Mathematics Solution Guide</h1>
+
+        <!-- QUESTION 1 START -->
+        <div class="question-block">
+            <div class="question-header">
+                <span>DSE24PII_Q04</span>
+                <span>Mathematics</span>
+            </div>
+            
+            <div class="question-content">
+                <p><strong>Question:</strong></p>
+                <ol start="4">
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="0" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="7.712ex" height="2.398ex" role="img" focusable="false" viewBox="0 -949 3408.8 1060" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.251ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msqrt"><g transform="translate(853,0)"><g data-mml-node="mn"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(500,0)"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(1000,0)"></use></g></g><g data-mml-node="mo" transform="translate(0,89)"><use data-c="221A" xlink:href="#MJX-TEX-N-221A"></use></g><rect width="1500" height="60" x="853" y="829"></rect></g><g data-mml-node="mo" transform="translate(2630.8,0)"><use data-c="3D" xlink:href="#MJX-TEX-N-3D"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mn>333</mn></msqrt><mo>=</mo></math></mjx-assistive-mml></mjx-container>
+<ol type="A">
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="1" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 1000 688" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18</mn></math></mjx-assistive-mml></mjx-container> &nbsp; (correct to the nearest integer).</li>
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="2" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="5.154ex" height="1.581ex" role="img" focusable="false" viewBox="0 -677 2278 699" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18.24</mn></math></mjx-assistive-mml></mjx-container> &nbsp; (correct to 2 decimal places).</li>
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="3" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="6.285ex" height="1.581ex" role="img" focusable="false" viewBox="0 -677 2778 699" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18.248</mn></math></mjx-assistive-mml></mjx-container> &nbsp; (correct to 3 significant figures).</li>
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="4" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="7.416ex" height="1.581ex" role="img" focusable="false" viewBox="0 -677 3278 699" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(2778,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18.2482</mn></math></mjx-assistive-mml></mjx-container> &nbsp; (correct to 4 decimal places).</li>
+</ol>
+</li>
+</ol>
+            </div>
+
+            <div class="solution-content">
+                <div class="solution-title">Solution Analysis</div>
+                
+                <p>
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" display="true" tabindex="0" ctxtmenu_counter="5" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="24.853ex" height="2.439ex" role="img" focusable="false" viewBox="0 -883.9 10984.9 1077.9" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.439ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use></g><g data-mml-node="mn" transform="translate(1033,413) scale(0.707)"><use data-c="32" xlink:href="#MJX-TEX-N-32"></use></g></g><g data-mml-node="mo" transform="translate(1714.3,0)"><use data-c="3D" xlink:href="#MJX-TEX-N-3D"></use></g><g data-mml-node="mn" transform="translate(2770.1,0)"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(500,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1000,0)"></use></g><g data-mml-node="mo" transform="translate(4270.1,0)"><use data-c="2C" xlink:href="#MJX-TEX-N-2C"></use></g><g data-mml-node="mstyle" transform="translate(4548.1,0)"><g data-mml-node="mspace"></g></g><g data-mml-node="msup" transform="translate(6714.8,0)"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="39" xlink:href="#MJX-TEX-N-39" transform="translate(500,0)"></use></g><g data-mml-node="mn" transform="translate(1033,413) scale(0.707)"><use data-c="32" xlink:href="#MJX-TEX-N-32"></use></g></g><g data-mml-node="mo" transform="translate(8429.1,0)"><use data-c="3D" xlink:href="#MJX-TEX-N-3D"></use></g><g data-mml-node="mn" transform="translate(9484.9,0)"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="36" xlink:href="#MJX-TEX-N-36" transform="translate(500,0)"></use><use data-c="31" xlink:href="#MJX-TEX-N-31" transform="translate(1000,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msup><mn>18</mn><mn>2</mn></msup><mo>=</mo><mn>324</mn><mo>,</mo><mstyle scriptlevel="0"><mspace width="2em"></mspace></mstyle><msup><mn>19</mn><mn>2</mn></msup><mo>=</mo><mn>361</mn></math></mjx-assistive-mml></mjx-container>
+Since
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" display="true" tabindex="0" ctxtmenu_counter="6" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="16.844ex" height="1.971ex" role="img" focusable="false" viewBox="0 -677 7445.1 871" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.439ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(500,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1000,0)"></use></g><g data-mml-node="mo" transform="translate(1777.8,0)"><use data-c="3C" xlink:href="#MJX-TEX-N-3C"></use></g><g data-mml-node="mn" transform="translate(2833.6,0)"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(500,0)"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(1000,0)"></use></g><g data-mml-node="mo" transform="translate(4611.3,0)"><use data-c="3C" xlink:href="#MJX-TEX-N-3C"></use></g><g data-mml-node="mn" transform="translate(5667.1,0)"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="36" xlink:href="#MJX-TEX-N-36" transform="translate(500,0)"></use><use data-c="31" xlink:href="#MJX-TEX-N-31" transform="translate(1000,0)"></use></g><g data-mml-node="mo" transform="translate(7167.1,0)"><use data-c="2C" xlink:href="#MJX-TEX-N-2C"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mn>324</mn><mo>&lt;</mo><mn>333</mn><mo>&lt;</mo><mn>361</mn><mo>,</mo></math></mjx-assistive-mml></mjx-container>
+we have
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" display="true" tabindex="0" ctxtmenu_counter="7" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="16.512ex" height="2.398ex" role="img" focusable="false" viewBox="0 -996.8 7298.1 1060" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.143ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use></g><g data-mml-node="mo" transform="translate(1277.8,0)"><use data-c="3C" xlink:href="#MJX-TEX-N-3C"></use></g><g data-mml-node="msqrt" transform="translate(2333.6,0)"><g transform="translate(853,0)"><g data-mml-node="mn"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(500,0)"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(1000,0)"></use></g></g><g data-mml-node="mo" transform="translate(0,136.7)"><use data-c="221A" xlink:href="#MJX-TEX-N-221A"></use></g><rect width="1500" height="60" x="853" y="876.7"></rect></g><g data-mml-node="mo" transform="translate(4964.3,0)"><use data-c="3C" xlink:href="#MJX-TEX-N-3C"></use></g><g data-mml-node="mn" transform="translate(6020.1,0)"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="39" xlink:href="#MJX-TEX-N-39" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mn>18</mn><mo>&lt;</mo><msqrt><mn>333</mn></msqrt><mo>&lt;</mo><mn>19.</mn></math></mjx-assistive-mml></mjx-container>
+</p>
+<p>
+Using a calculator,
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" display="true" tabindex="0" ctxtmenu_counter="8" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="30.098ex" height="2.398ex" role="img" focusable="false" viewBox="0 -996.8 13303.2 1060" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.143ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msqrt"><g transform="translate(853,0)"><g data-mml-node="mn"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(500,0)"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(1000,0)"></use></g></g><g data-mml-node="mo" transform="translate(0,136.7)"><use data-c="221A" xlink:href="#MJX-TEX-N-221A"></use></g><rect width="1500" height="60" x="853" y="876.7"></rect></g><g data-mml-node="mo" transform="translate(2630.8,0)"><use data-c="2248" xlink:href="#MJX-TEX-N-2248"></use></g><g data-mml-node="mn" transform="translate(3686.6,0)"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(2778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(3278,0)"></use><use data-c="37" xlink:href="#MJX-TEX-N-37" transform="translate(3778,0)"></use><use data-c="35" xlink:href="#MJX-TEX-N-35" transform="translate(4278,0)"></use><use data-c="39" xlink:href="#MJX-TEX-N-39" transform="translate(4778,0)"></use><use data-c="30" xlink:href="#MJX-TEX-N-30" transform="translate(5278,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(5778,0)"></use><use data-c="39" xlink:href="#MJX-TEX-N-39" transform="translate(6278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(6778,0)"></use><use data-c="36" xlink:href="#MJX-TEX-N-36" transform="translate(7278,0)"></use><use data-c="36" xlink:href="#MJX-TEX-N-36" transform="translate(7778,0)"></use></g><g data-mml-node="mo" transform="translate(12131.2,0)"><use data-c="2026" xlink:href="#MJX-TEX-N-2026"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msqrt><mn>333</mn></msqrt><mo>≈</mo><mn>18.24828759089466</mn><mo>…</mo></math></mjx-assistive-mml></mjx-container>
+</p>
+
+<ol type="A">
+<li><strong>Correct to the nearest integer:</strong>
+<br>
+Since <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="9" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="16.353ex" height="1.622ex" role="img" focusable="false" viewBox="0 -677 7228.2 717" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.09ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use></g><g data-mml-node="mo" transform="translate(2944.7,0)"><use data-c="2026" xlink:href="#MJX-TEX-N-2026"></use></g><g data-mml-node="mo" transform="translate(4394.4,0)"><use data-c="3C" xlink:href="#MJX-TEX-N-3C"></use></g><g data-mml-node="mn" transform="translate(5450.2,0)"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="35" xlink:href="#MJX-TEX-N-35" transform="translate(1278,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18.248</mn><mo>…</mo><mo>&lt;</mo><mn>18.5</mn></math></mjx-assistive-mml></mjx-container>,
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" display="true" tabindex="0" ctxtmenu_counter="10" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="12.44ex" height="2.909ex" role="img" focusable="false" viewBox="0 -996.8 5498.6 1285.8" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.654ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msqrt"><g transform="translate(853,0)"><g data-mml-node="mn"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(500,0)"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(1000,0)"></use></g></g><g data-mml-node="mo" transform="translate(0,136.7)"><use data-c="221A" xlink:href="#MJX-TEX-N-221A"></use></g><rect width="1500" height="60" x="853" y="876.7"></rect></g><g data-mml-node="mo" transform="translate(2630.8,0)"><use data-c="2248" xlink:href="#MJX-TEX-N-2248"></use></g><g data-mml-node="menclose" transform="translate(3686.6,0)"><g transform="translate(267, 0)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mstyle"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use></g></g></g></g></g><rect x="33.5" y="-255.5" width="1467" height="1155" fill="none" stroke-width="67"></rect></g><g data-mml-node="mo" transform="translate(5220.6,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msqrt><mn>333</mn></msqrt><mo>≈</mo><menclose notation="box"><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mrow data-mjx-texclass="ORD"><mn>18</mn></mrow></mstyle></mrow></menclose><mo>.</mo></math></mjx-assistive-mml></mjx-container>
+So A is correct.
+<div class="notes-box">
+    <div class="notes-title">Note</div>
+    When rounding to the nearest integer, we look at the first decimal digit. Here it is 2 (from 18.2...), which is less than 5, so we round down.
+</div>
+</li>
+
+<li><strong>Correct to 2 decimal places:</strong>
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" display="true" tabindex="0" ctxtmenu_counter="11" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="17.654ex" height="2.398ex" role="img" focusable="false" viewBox="0 -996.8 7803.2 1060" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.143ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msqrt"><g transform="translate(853,0)"><g data-mml-node="mn"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(500,0)"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(1000,0)"></use></g></g><g data-mml-node="mo" transform="translate(0,136.7)"><use data-c="221A" xlink:href="#MJX-TEX-N-221A"></use></g><rect width="1500" height="60" x="853" y="876.7"></rect></g><g data-mml-node="mo" transform="translate(2630.8,0)"><use data-c="2248" xlink:href="#MJX-TEX-N-2248"></use></g><g data-mml-node="mn" transform="translate(3686.6,0)"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use></g><g data-mml-node="mo" transform="translate(6631.2,0)"><use data-c="2026" xlink:href="#MJX-TEX-N-2026"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msqrt><mn>333</mn></msqrt><mo>≈</mo><mn>18.248</mn><mo>…</mo></math></mjx-assistive-mml></mjx-container>
+The 3rd decimal place is <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="12" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 500 688" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="38" xlink:href="#MJX-TEX-N-38"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>8</mn></math></mjx-assistive-mml></mjx-container>, so <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="13" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="5.154ex" height="1.581ex" role="img" focusable="false" viewBox="0 -677 2278 699" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18.24</mn></math></mjx-assistive-mml></mjx-container> rounds up to
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" display="true" tabindex="0" ctxtmenu_counter="14" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="15.332ex" height="2.909ex" role="img" focusable="false" viewBox="0 -996.8 6776.6 1285.8" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.654ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msqrt"><g transform="translate(853,0)"><g data-mml-node="mn"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(500,0)"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(1000,0)"></use></g></g><g data-mml-node="mo" transform="translate(0,136.7)"><use data-c="221A" xlink:href="#MJX-TEX-N-221A"></use></g><rect width="1500" height="60" x="853" y="876.7"></rect></g><g data-mml-node="mo" transform="translate(2630.8,0)"><use data-c="2248" xlink:href="#MJX-TEX-N-2248"></use></g><g data-mml-node="menclose" transform="translate(3686.6,0)"><g transform="translate(267, 0)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mstyle"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="35" xlink:href="#MJX-TEX-N-35" transform="translate(1778,0)"></use></g></g></g></g></g><rect x="33.5" y="-255.5" width="2745" height="1155" fill="none" stroke-width="67"></rect></g><g data-mml-node="mo" transform="translate(6498.6,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msqrt><mn>333</mn></msqrt><mo>≈</mo><menclose notation="box"><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mrow data-mjx-texclass="ORD"><mn>18.25</mn></mrow></mstyle></mrow></menclose><mo>.</mo></math></mjx-assistive-mml></mjx-container>
+So the given <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="15" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="5.154ex" height="1.581ex" role="img" focusable="false" viewBox="0 -677 2278 699" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18.24</mn></math></mjx-assistive-mml></mjx-container> is not correct to 2 d.p.
+</li>
+
+<li><strong>Correct to 3 significant figures:</strong>
+<div class="trap-box">
+    <div class="trap-title">Common Trap</div>
+    Do not confuse "Decimal Places" (d.p.) with "Significant Figures" (s.f.).
+    <ul>
+        <li><strong>Decimal Places:</strong> Count digits after the decimal point.</li>
+        <li><strong>Significant Figures:</strong> Count digits starting from the first non-zero digit.</li>
+    </ul>
+    For <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="16" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="6.285ex" height="1.581ex" role="img" focusable="false" viewBox="0 -677 2778 699" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18.248</mn></math></mjx-assistive-mml></mjx-container>, there are 3 decimal places, but <strong>5 significant figures</strong>.
+</div>
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" display="true" tabindex="0" ctxtmenu_counter="17" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="17.654ex" height="2.398ex" role="img" focusable="false" viewBox="0 -996.8 7803.2 1060" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.143ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msqrt"><g transform="translate(853,0)"><g data-mml-node="mn"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(500,0)"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(1000,0)"></use></g></g><g data-mml-node="mo" transform="translate(0,136.7)"><use data-c="221A" xlink:href="#MJX-TEX-N-221A"></use></g><rect width="1500" height="60" x="853" y="876.7"></rect></g><g data-mml-node="mo" transform="translate(2630.8,0)"><use data-c="2248" xlink:href="#MJX-TEX-N-2248"></use></g><g data-mml-node="mn" transform="translate(3686.6,0)"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use></g><g data-mml-node="mo" transform="translate(6631.2,0)"><use data-c="2026" xlink:href="#MJX-TEX-N-2026"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msqrt><mn>333</mn></msqrt><mo>≈</mo><mn>18.248</mn><mo>…</mo></math></mjx-assistive-mml></mjx-container>
+The first 3 significant figures are <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="18" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="4.023ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 1778 688" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18.2</mn></math></mjx-assistive-mml></mjx-container>. The next digit is <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="19" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="1.532ex" role="img" focusable="false" viewBox="0 -677 500 677" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: 0px;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="34" xlink:href="#MJX-TEX-N-34"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>4</mn></math></mjx-assistive-mml></mjx-container> (which is <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="20" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="3.52ex" height="1.597ex" role="img" focusable="false" viewBox="0 -666 1555.8 706" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.09ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="3C" xlink:href="#MJX-TEX-N-3C"></use></g><g data-mml-node="mn" transform="translate(1055.8,0)"><use data-c="35" xlink:href="#MJX-TEX-N-35"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo><mn>5</mn></math></mjx-assistive-mml></mjx-container>), so
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" display="true" tabindex="0" ctxtmenu_counter="21" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="22.132ex" height="2.909ex" role="img" focusable="false" viewBox="0 -996.8 9782.6 1285.8" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.654ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msqrt"><g transform="translate(853,0)"><g data-mml-node="mn"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(500,0)"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(1000,0)"></use></g></g><g data-mml-node="mo" transform="translate(0,136.7)"><use data-c="221A" xlink:href="#MJX-TEX-N-221A"></use></g><rect width="1500" height="60" x="853" y="876.7"></rect></g><g data-mml-node="mo" transform="translate(2630.8,0)"><use data-c="2248" xlink:href="#MJX-TEX-N-2248"></use></g><g data-mml-node="menclose" transform="translate(3686.6,0)"><g transform="translate(267, 0)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mstyle"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use></g></g></g></g></g><rect x="33.5" y="-255.5" width="2245" height="1155" fill="none" stroke-width="67"></rect></g><g data-mml-node="mstyle" transform="translate(5998.6,0)"><g data-mml-node="mspace"></g></g><g data-mml-node="mo" transform="translate(6998.6,0)"><use data-c="28" xlink:href="#MJX-TEX-N-28"></use></g><g data-mml-node="mtext" transform="translate(7387.6,0)"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="20" xlink:href="#MJX-TEX-N-20" transform="translate(500,0)"></use><use data-c="73" xlink:href="#MJX-TEX-N-73" transform="translate(750,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1144,0)"></use><use data-c="66" xlink:href="#MJX-TEX-N-66" transform="translate(1422,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1728,0)"></use></g><g data-mml-node="mo" transform="translate(9393.6,0)"><use data-c="29" xlink:href="#MJX-TEX-N-29"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msqrt><mn>333</mn></msqrt><mo>≈</mo><menclose notation="box"><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mrow data-mjx-texclass="ORD"><mn>18.2</mn></mrow></mstyle></mrow></menclose><mstyle scriptlevel="0"><mspace width="1em"></mspace></mstyle><mo stretchy="false">(</mo><mtext>3 s.f.</mtext><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container>
+So the given <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="22" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="6.285ex" height="1.581ex" role="img" focusable="false" viewBox="0 -677 2778 699" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18.248</mn></math></mjx-assistive-mml></mjx-container> is not correct to 3 s.f.
+</li>
+
+<li><strong>Correct to 4 decimal places:</strong>
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" display="true" tabindex="0" ctxtmenu_counter="23" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="21.048ex" height="2.398ex" role="img" focusable="false" viewBox="0 -996.8 9303.2 1060" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.143ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msqrt"><g transform="translate(853,0)"><g data-mml-node="mn"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(500,0)"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(1000,0)"></use></g></g><g data-mml-node="mo" transform="translate(0,136.7)"><use data-c="221A" xlink:href="#MJX-TEX-N-221A"></use></g><rect width="1500" height="60" x="853" y="876.7"></rect></g><g data-mml-node="mo" transform="translate(2630.8,0)"><use data-c="2248" xlink:href="#MJX-TEX-N-2248"></use></g><g data-mml-node="mn" transform="translate(3686.6,0)"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(2778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(3278,0)"></use><use data-c="37" xlink:href="#MJX-TEX-N-37" transform="translate(3778,0)"></use></g><g data-mml-node="mo" transform="translate(8131.2,0)"><use data-c="2026" xlink:href="#MJX-TEX-N-2026"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msqrt><mn>333</mn></msqrt><mo>≈</mo><mn>18.248287</mn><mo>…</mo></math></mjx-assistive-mml></mjx-container>
+The 5th decimal place is <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="24" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 500 688" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="38" xlink:href="#MJX-TEX-N-38"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>8</mn></math></mjx-assistive-mml></mjx-container> (which is <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="25" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="3.52ex" height="1.819ex" role="img" focusable="false" viewBox="0 -666 1555.8 804" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.312ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="2265" xlink:href="#MJX-TEX-N-2265"></use></g><g data-mml-node="mn" transform="translate(1055.8,0)"><use data-c="35" xlink:href="#MJX-TEX-N-35"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≥</mo><mn>5</mn></math></mjx-assistive-mml></mjx-container>), so <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="26" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="7.416ex" height="1.581ex" role="img" focusable="false" viewBox="0 -677 3278 699" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(2778,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18.2482</mn></math></mjx-assistive-mml></mjx-container> rounds up to
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" display="true" tabindex="0" ctxtmenu_counter="27" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="17.594ex" height="2.909ex" role="img" focusable="false" viewBox="0 -996.8 7776.6 1285.8" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.654ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msqrt"><g transform="translate(853,0)"><g data-mml-node="mn"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(500,0)"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(1000,0)"></use></g></g><g data-mml-node="mo" transform="translate(0,136.7)"><use data-c="221A" xlink:href="#MJX-TEX-N-221A"></use></g><rect width="1500" height="60" x="853" y="876.7"></rect></g><g data-mml-node="mo" transform="translate(2630.8,0)"><use data-c="2248" xlink:href="#MJX-TEX-N-2248"></use></g><g data-mml-node="menclose" transform="translate(3686.6,0)"><g transform="translate(267, 0)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mstyle"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(2778,0)"></use></g></g></g></g></g><rect x="33.5" y="-255.5" width="3745" height="1166" fill="none" stroke-width="67"></rect></g><g data-mml-node="mo" transform="translate(7498.6,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msqrt><mn>333</mn></msqrt><mo>≈</mo><menclose notation="box"><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mrow data-mjx-texclass="ORD"><mn>18.2483</mn></mrow></mstyle></mrow></menclose><mo>.</mo></math></mjx-assistive-mml></mjx-container>
+So the given <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="28" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="7.416ex" height="1.581ex" role="img" focusable="false" viewBox="0 -677 3278 699" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(2778,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18.2482</mn></math></mjx-assistive-mml></mjx-container> is not correct to 4 d.p.
+</li>
+</ol>
+            </div>
+
+            <!-- Notes are generated by AI because original LaTeX notes were empty -->
+            <div class="raw-notes">
+                <strong>Pedagogical Notes:</strong>
+                <ul>
+                    <li>Always write down the value from the calculator with at least 2 more digits than required by the options to ensure accurate rounding.</li>
+                    <li>For multiple-choice questions involving rounding, calculate the true value first, then test each option against it. Do not just look for a number that "looks similar".</li>
+                </ul>
+            </div>
+        </div>
+        <!-- QUESTION 1 END -->
+
+        <!-- CONSOLIDATED SUMMARY START -->
+        <div class="summary-section">
+            <h2>Consolidated Notes &amp; Strategy</h2>
+            <table class="summary-table">
+                <tbody><tr>
+                    <th>Notes</th>
+                    <td>
+                        <ul>
+                            <li><strong>Rounding Rules:</strong> Check the digit immediately following the last required digit. If it is 5 or greater, round up (add 1). If it is less than 5, leave the digit unchanged (round down).</li>
+                            <li><strong>Significant Figures (s.f.):</strong> Start counting from the first non-zero digit. Leading zeros are not significant. Trailing zeros after a decimal point are significant.</li>
+                            <li><strong>Decimal Places (d.p.):</strong> Start counting immediately after the decimal point.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Strategy</th>
+                    <td>
+                        <ol>
+                            <li>Use your calculator to find the value of the root: <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="29" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="20.66ex" height="2.398ex" role="img" focusable="false" viewBox="0 -949 9131.9 1060" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.251ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msqrt"><g transform="translate(853,0)"><g data-mml-node="mn"><use data-c="33" xlink:href="#MJX-TEX-N-33"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(500,0)"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(1000,0)"></use></g></g><g data-mml-node="mo" transform="translate(0,89)"><use data-c="221A" xlink:href="#MJX-TEX-N-221A"></use></g><rect width="1500" height="60" x="853" y="829"></rect></g><g data-mml-node="mo" transform="translate(2630.8,0)"><use data-c="2248" xlink:href="#MJX-TEX-N-2248"></use></g><g data-mml-node="mn" transform="translate(3686.6,0)"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(2778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(3278,0)"></use><use data-c="37" xlink:href="#MJX-TEX-N-37" transform="translate(3778,0)"></use></g><g data-mml-node="mo" transform="translate(7964.6,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(8409.2,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(8853.9,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mn>333</mn></msqrt><mo>≈</mo><mn>18.248287</mn><mo>.</mo><mo>.</mo><mo>.</mo></math></mjx-assistive-mml></mjx-container></li>
+                            <li>Write this value down on your rough paper.</li>
+                            <li>Check Option A (Nearest Integer): Check 1st decimal digit. <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="30" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="12.194ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 5389.8 688" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use></g><g data-mml-node="mo" transform="translate(1778,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(2222.7,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(2667.3,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(3112,0)"><use data-c="2192" xlink:href="#MJX-TEX-N-2192"></use></g><g data-mml-node="mn" transform="translate(4389.8,0)"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18.2</mn><mo>.</mo><mo>.</mo><mo>.</mo><mo accent="false" stretchy="false">→</mo><mn>18</mn></math></mjx-assistive-mml></mjx-container>. (Match)</li>
+                            <li>Check Option B (2 d.p.): Check 3rd decimal digit (8). <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="31" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="17.348ex" height="1.581ex" role="img" focusable="false" viewBox="0 -677 7667.8 699" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use></g><g data-mml-node="mo" transform="translate(2778,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(3222.7,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(3667.3,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(4112,0)"><use data-c="2192" xlink:href="#MJX-TEX-N-2192"></use></g><g data-mml-node="mn" transform="translate(5389.8,0)"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="35" xlink:href="#MJX-TEX-N-35" transform="translate(1778,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18.248</mn><mo>.</mo><mo>.</mo><mo>.</mo><mo accent="false" stretchy="false">→</mo><mn>18.25</mn></math></mjx-assistive-mml></mjx-container>. (Mismatch)</li>
+                            <li>Check Option C (3 s.f.): Check 4th significant digit (4). <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="32" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="15.085ex" height="1.581ex" role="img" focusable="false" viewBox="0 -677 6667.8 699" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use></g><g data-mml-node="mo" transform="translate(2278,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(2722.7,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(3167.3,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(3612,0)"><use data-c="2192" xlink:href="#MJX-TEX-N-2192"></use></g><g data-mml-node="mn" transform="translate(4889.8,0)"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18.24</mn><mo>.</mo><mo>.</mo><mo>.</mo><mo accent="false" stretchy="false">→</mo><mn>18.2</mn></math></mjx-assistive-mml></mjx-container>. (Mismatch)</li>
+                            <li>Check Option D (4 d.p.): Check 5th decimal digit (8). <mjx-container class="MathJax CtxtMenu_Attached_0" jax="SVG" tabindex="0" ctxtmenu_counter="33" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="21.873ex" height="1.581ex" role="img" focusable="false" viewBox="0 -677 9667.8 699" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.05ex;"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(2778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(3278,0)"></use></g><g data-mml-node="mo" transform="translate(3778,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(4222.7,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(4667.3,0)"><use data-c="2E" xlink:href="#MJX-TEX-N-2E"></use></g><g data-mml-node="mo" transform="translate(5112,0)"><use data-c="2192" xlink:href="#MJX-TEX-N-2192"></use></g><g data-mml-node="mn" transform="translate(6389.8,0)"><use data-c="31" xlink:href="#MJX-TEX-N-31"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(500,0)"></use><use data-c="2E" xlink:href="#MJX-TEX-N-2E" transform="translate(1000,0)"></use><use data-c="32" xlink:href="#MJX-TEX-N-32" transform="translate(1278,0)"></use><use data-c="34" xlink:href="#MJX-TEX-N-34" transform="translate(1778,0)"></use><use data-c="38" xlink:href="#MJX-TEX-N-38" transform="translate(2278,0)"></use><use data-c="33" xlink:href="#MJX-TEX-N-33" transform="translate(2778,0)"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18.24828</mn><mo>.</mo><mo>.</mo><mo>.</mo><mo accent="false" stretchy="false">→</mo><mn>18.2483</mn></math></mjx-assistive-mml></mjx-container>. (Mismatch)</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Required Skill</th>
+                    <td>
+                        <ul>
+                            <li><strong>Approximation and Estimation:</strong> Ability to round numbers to required significant figures, decimal places, or integers.</li>
+                            <li><strong>Number Sense:</strong> Ability to determine the magnitude of irrational numbers.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        <!-- CONSOLIDATED SUMMARY END -->
+
+    </div>
+
+    <script>
+        function downloadHTML() {
+            const content = document.documentElement.outerHTML;
+            const blob = new Blob([content], {type: 'text/html'});
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'Math_DSE24PII_Q04_Solution.html';
+            a.click();
+        }
+
+        function printToPDF() {
+            window.print();
+        }
+    </script>
+
+<svg id="MJX-SVG-global-cache" style="display: none;"><defs><path id="MJX-TEX-N-221A" d="M95 178Q89 178 81 186T72 200T103 230T169 280T207 309Q209 311 212 311H213Q219 311 227 294T281 177Q300 134 312 108L397 -77Q398 -77 501 136T707 565T814 786Q820 800 834 800Q841 800 846 794T853 782V776L620 293L385 -193Q381 -200 366 -200Q357 -200 354 -197Q352 -195 256 15L160 225L144 214Q129 202 113 190T95 178Z"></path><path id="MJX-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path id="MJX-TEX-N-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path id="MJX-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-TEX-N-38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"></path><path id="MJX-TEX-N-2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path><path id="MJX-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-TEX-N-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path><path id="MJX-TEX-N-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path><path id="MJX-TEX-N-39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"></path><path id="MJX-TEX-N-36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"></path><path id="MJX-TEX-N-3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path><path id="MJX-TEX-N-2248" d="M55 319Q55 360 72 393T114 444T163 472T205 482Q207 482 213 482T223 483Q262 483 296 468T393 413L443 381Q502 346 553 346Q609 346 649 375T694 454Q694 465 698 474T708 483Q722 483 722 452Q722 386 675 338T555 289Q514 289 468 310T388 357T308 404T224 426Q164 426 125 393T83 318Q81 289 69 289Q55 289 55 319ZM55 85Q55 126 72 159T114 210T163 238T205 248Q207 248 213 248T223 249Q262 249 296 234T393 179L443 147Q502 112 553 112Q609 112 649 141T694 220Q694 249 708 249T722 217Q722 153 675 104T555 55Q514 55 468 76T388 123T308 170T224 192Q164 192 125 159T83 84Q80 55 69 55Q55 55 55 85Z"></path><path id="MJX-TEX-N-37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z"></path><path id="MJX-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path><path id="MJX-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path id="MJX-TEX-N-2026" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60ZM525 60Q525 84 542 102T585 120Q609 120 627 104T646 61Q646 36 629 18T586 0T543 17T525 60ZM972 60Q972 84 989 102T1032 120Q1056 120 1074 104T1093 61Q1093 36 1076 18T1033 0T990 17T972 60Z"></path><path id="MJX-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-TEX-N-20" d=""></path><path id="MJX-TEX-N-73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z"></path><path id="MJX-TEX-N-66" d="M273 0Q255 3 146 3Q43 3 34 0H26V46H42Q70 46 91 49Q99 52 103 60Q104 62 104 224V385H33V431H104V497L105 564L107 574Q126 639 171 668T266 704Q267 704 275 704T289 705Q330 702 351 679T372 627Q372 604 358 590T321 576T284 590T270 627Q270 647 288 667H284Q280 668 273 668Q245 668 223 647T189 592Q183 572 182 497V431H293V385H185V225Q185 63 186 61T189 57T194 54T199 51T206 49T213 48T222 47T231 47T241 46T251 46H282V0H273Z"></path><path id="MJX-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path><path id="MJX-TEX-N-2265" d="M83 616Q83 624 89 630T99 636Q107 636 253 568T543 431T687 361Q694 356 694 346T687 331Q685 329 395 192L107 56H101Q83 58 83 76Q83 77 83 79Q82 86 98 95Q117 105 248 167Q326 204 378 228L626 346L360 472Q291 505 200 548Q112 589 98 597T83 616ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path><path id="MJX-TEX-N-2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></defs></svg></body></html>
